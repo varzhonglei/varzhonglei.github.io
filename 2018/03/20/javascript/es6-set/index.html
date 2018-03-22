@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>es6-set | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="如有错误，请联系qq946149730    set和map是es6中新定义的数据结构  set 简单说明： set是类似与数组的数据结构，该集合中的元素不可重复  set 实例的属性和方法 Set 结构的实例有以下属性。   Set.prototype.constructor：构造函数，默认就是Set函数。 Set.prototype.size：返回Set实例的成员总数。 ---- 类似与数">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="es6-set">
+<meta property="og:url" content="http://yoursite.com/2018/03/20/javascript/es6-set/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="如有错误，请联系qq946149730    set和map是es6中新定义的数据结构  set 简单说明： set是类似与数组的数据结构，该集合中的元素不可重复  set 实例的属性和方法 Set 结构的实例有以下属性。   Set.prototype.constructor：构造函数，默认就是Set函数。 Set.prototype.size：返回Set实例的成员总数。 ---- 类似与数">
+<meta property="og:updated_time" content="2018-03-20T16:12:21.970Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="es6-set">
+<meta name="twitter:description" content="如有错误，请联系qq946149730    set和map是es6中新定义的数据结构  set 简单说明： set是类似与数组的数据结构，该集合中的元素不可重复  set 实例的属性和方法 Set 结构的实例有以下属性。   Set.prototype.constructor：构造函数，默认就是Set函数。 Set.prototype.size：返回Set实例的成员总数。 ---- 类似与数">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-javascript/es6-set" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/20/javascript/es6-set/" class="article-date">
+  <time datetime="2018-03-20T14:24:48.000Z" itemprop="datePublished">2018-03-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      es6-set
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<ul>
+<li>如有错误，请联系qq<code>946149730</code></li>
+</ul>
+<hr>
+<ul>
+<li><code>set</code>和<code>map</code>是es6中新定义的数据结构</li>
+</ul>
+<h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><ul>
+<li>简单说明： set是类似与数组的数据结构，该集合中的元素不可重复</li>
+</ul>
+<h3 id="set-实例的属性和方法"><a href="#set-实例的属性和方法" class="headerlink" title="set 实例的属性和方法"></a>set 实例的属性和方法</h3><ul>
+<li>Set 结构的实例有以下属性。</li>
+</ul>
+<ol>
+<li>Set.prototype.constructor：构造函数，默认就是Set函数。</li>
+<li>Set.prototype.size：返回Set实例的成员总数。 <code>---- 类似与数组.length</code></li>
+</ol>
+<ul>
+<li><p>Set 实例的方法分为两大类：操作方法（用于操作数据）和遍历方法（用于遍历成员）。</p>
+</li>
+<li><p>下面先介绍四个操作方法。</p>
+</li>
+</ul>
+<ol>
+<li>add(value)：添加某个值，返回 Set 结构本身。  <code>--- 可以链式调用</code></li>
+<li>delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。</li>
+<li>has(value)：返回一个布尔值，表示该值是否为Set的成员。</li>
+<li>clear()：清除所有成员，没有返回值。</li>
+</ol>
+<ul>
+<li>Set 结构的实例有四个遍历方法，可以用于遍历成员。</li>
+</ul>
+<ol>
+<li>keys()：返回键名的遍历器</li>
+<li>values()：返回键值的遍历器 <code>-----默认遍历器</code>   </li>
+<li>entries()：返回键值对的遍历器</li>
+<li>forEach()：使用回调函数遍历每个成员</li>
+</ol>
+<ul>
+<li>特别指出: Set的遍历顺序就是插入顺序; 该点应用：用Set保存回调函数列表， 可按保存的顺序执行</li>
+<li>Set结构默认可遍历<br><code>Set.prototype[Symbol.iterator] === Set.prototype.values</code>//true<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="string">'red'</span>, <span class="string">'green'</span>, <span class="string">'blue'</span>]);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> x <span class="keyword">of</span> set) &#123;</span><br><span class="line"><span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//red</span></span><br><span class="line"><span class="comment">//green</span></span><br><span class="line"><span class="comment">//blue</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="set-应用"><a href="#set-应用" class="headerlink" title="set 应用"></a>set 应用</h3><ol>
+<li>用Set保存回调函数列表， 可按保存的顺序执行</li>
+<li>数组去重</li>
+</ol>
+<ul>
+<li><p>这里复习下，es5的经典数组去重</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.unique = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> len = <span class="keyword">this</span>.length,</span><br><span class="line">    arr = [],</span><br><span class="line">    obj = &#123;&#125;;   </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!obj[<span class="keyword">this</span>[i]]) &#123;  </span><br><span class="line">                obj[<span class="keyword">this</span>[i]] = <span class="number">1</span>;</span><br><span class="line">                arr.push(<span class="keyword">this</span>[i]);</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//this.splice(0, this.length, arr);  这句可以直接改变原数组</span></span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>点评： 这种方法通过对象的键名不可重复；从而达到去筛选重复值的效果<br><code>依赖[]运算符， 在es5中</code>(es6的Symbol也可以做键名) <code>[]运算符会把一切类型的值转化为字符串</code><br><code>这意味着 当数组里有多个NaN时， NaN不会被去重，数组中所有的对象只被保留一个</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line">a[&#123;&#125;] = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a)<span class="comment">// &#123; "[object Object]" : 1 &#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用与一般元素值去重足够了</p>
+</li>
+<li><p>接下来看看es6 如何优雅去重</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">3</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> unique = [...new <span class="built_in">Set</span>(arr)];</span><br><span class="line"><span class="comment">// [3, 5, 2]</span></span><br><span class="line"><span class="comment">//这里视乎可以看出 ...展开运算符 展开的就是针对有iterator的集合， 因为数组可以展开，Set可以展开。并且他们都有iterator； 我还没有来的及查证哈</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//另一种es6去重</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dedupe</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(array));</span><br><span class="line">&#125;</span><br><span class="line">dedupe([<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]) <span class="comment">// [1, 2, 3]</span></span><br><span class="line"><span class="comment">// Array.from可以把什么转化为数组</span></span><br><span class="line"><span class="comment">// 在MDN中这样解释的： Array.from()方法 从一个 类似数组 或 可迭代对象 中创建一个新的数组实例。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>点评： es6的去数组去重，强大了。 </p>
+</li>
+<li>当面临有多个NaN要加入Set集合时，只有一个 NaN 能被纳入集合。<br>Set的不重复规则：使用的算法叫做“Same-value-zero equality”<code>类似与 === ，与===区别： 该算法认为NaN等于NaN</code></li>
+<li>数组中的对象也可以正常去重了 <code>注意 [{},{}] 中这两个对象是不同的，不会被去重</code></li>
+</ul>
+<ol>
+<li>用Set实现集合的 并集（Union）、交集（Intersect）和差集（Difference）</li>
+</ol>
+<ul>
+<li><p>操作技巧： <code>数组的map和filter方法也可以间接用于 Set</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</span><br><span class="line"><span class="keyword">let</span> b = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 并集</span></span><br><span class="line"><span class="keyword">let</span> union = <span class="keyword">new</span> <span class="built_in">Set</span>([...a, ...b]);</span><br><span class="line"><span class="comment">// Set &#123;1, 2, 3, 4&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 交集</span></span><br><span class="line"><span class="keyword">let</span> intersect = <span class="keyword">new</span> <span class="built_in">Set</span>([...a].filter(<span class="function"><span class="params">x</span> =&gt;</span> b.has(x)));</span><br><span class="line"><span class="comment">// set &#123;2, 3&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 差集</span></span><br><span class="line"><span class="keyword">let</span> difference = <span class="keyword">new</span> <span class="built_in">Set</span>([...a].filter(<span class="function"><span class="params">x</span> =&gt;</span> !b.has(x)));</span><br><span class="line"><span class="comment">// Set &#123;1&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其他操作技巧： <code>如果想在遍历操作中，同步改变原来的 Set 结构，目前没有直接的方法，但有两种变通方法。</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</span><br><span class="line">set = <span class="keyword">new</span> <span class="built_in">Set</span>([...set].map(<span class="function"><span class="params">val</span> =&gt;</span> val * <span class="number">2</span>));</span><br><span class="line"><span class="comment">// set的值是2, 4, 6</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法二</span></span><br><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</span><br><span class="line">set = <span class="keyword">new</span> <span class="built_in">Set</span>(<span class="built_in">Array</span>.from(set, val =&gt; val * <span class="number">2</span>));</span><br><span class="line"><span class="comment">// set的值是2, 4, 6</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>参考<code>ruanyifeng</code>大大的 <a href="http://es6.ruanyifeng.com/#docs/set-map" target="_blank" rel="noopener">ECMAscript 6 入门</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/20/javascript/es6-set/" data-id="cjf2ol385000cmcr3db2o1ojt" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/22/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/22/javascript/对象数组的遍历/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">对象、数组的遍历</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/travel/">travel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/travel/" style="font-size: 10px;">travel</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/22/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/20/javascript/es6-set/">es6-set</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/22/javascript/对象数组的遍历/">对象、数组的遍历</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/09/travel/">travel</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/09/javascript/字符串操作/">字符串操作</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
